@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { nanoid } from 'nanoid'
 
 import initialContacts from './myContacts.json'
 import ContactList from './components/ContactList/ContactList'
@@ -13,8 +14,9 @@ function App() {
   const visibleContacts = contacts.filter((item)=>item.name.toLowerCase().includes(filter.toLowerCase()))
 
   const addContact = (newContact) => {
+    const finalContact = { ...newContact, id: nanoid(), };
     setContacts((prevContacts) => {
-      return [...prevContacts, newContact];
+      return [...prevContacts, finalContact];
     })
   }
 
@@ -28,7 +30,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact } />
       <SearchBox value={filter} onFilter={setFilter } />
-  <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+      <ContactList contacts={visibleContacts} onDelete={deleteContact} />
 </div>
 
   )

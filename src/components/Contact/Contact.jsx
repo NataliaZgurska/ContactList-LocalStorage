@@ -4,17 +4,17 @@ import css from './Contact.module.css'
 
 const Contact = ({ contact, onDelete }) => {
     
-    const { id, name, number } = contact;
+  const { id, name, number } = contact;
     
   return (
-      <li className={css.contactItem}>
-          <div className={css.contactItemTextContainer}>
+    <li className={css.contactItem}>
+        <div className={css.contactItemTextContainer}>
               <p className={css.contactItemText}><FaUser />{name }</p>
               <p className={css.contactItemText}><FaPhone />{number}</p>
-         </div>
-          <button onClick={() => onDelete(id)}>Delete</button>
+        </div>
+        <button onClick={() => onDelete(id)}>Delete</button>
      
-</li>
+    </li>
      
   )
 }
