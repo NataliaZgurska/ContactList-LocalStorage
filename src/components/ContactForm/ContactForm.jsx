@@ -15,8 +15,7 @@ const FormSchema = Yup.object().shape({
 
 const ContactForm = ({ onAdd }) => {
   const handleSubmit = (values, actions) => {
-      console.log(values);
-       onAdd(values);
+    onAdd(values);
     actions.resetForm();
 	};
 
