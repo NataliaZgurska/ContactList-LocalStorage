@@ -69,7 +69,6 @@ ol,
 ul {
   list-style: none;
   padding: 0;
-
 }
 
 input {
@@ -83,7 +82,6 @@ input {
 input:hover,
 input:focus {
   background-color: whitesmoke;
-
 }
 
 @media (prefers-color-scheme: light) {
@@ -94,5 +92,4 @@ input:focus {
   a:hover {
     color: #747bff;
   }
- 
 }
