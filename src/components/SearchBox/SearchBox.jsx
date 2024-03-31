@@ -1,15 +1,16 @@
-import css from './SearchBox.module.css'
-const SearchBox = ({value, onFilter}) => {
+import css from './SearchBox.module.css';
+const SearchBox = ({ value, onFilter }) => {
   return (
-      <div className={css.filterContainer}>
-          <p >Find contacts by name</p>
-          <input className={css.filterInput}
-              type="text"
-              value={value}
-              onChange={(e) => onFilter(e.target.value)}
-          /> 
+    <div className={css.filterContainer}>
+      <p>Find contacts by name</p>
+      <input
+        className={css.filterInput}
+        type="text"
+        value={value}
+        onChange={e => onFilter(e.target.value)}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default SearchBox
+export default SearchBox;
